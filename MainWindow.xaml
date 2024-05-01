@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfLearning.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLearning"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <TabControl Background="#FF4D9258">
+            <TabItem Header="Splitting a line">
+                <Grid Background="#FF4D9258" HorizontalAlignment="Center" VerticalAlignment="Center" Height="450" Width="800">
+                    <Label Content="Enter the textline you want to split into words"
+                           HorizontalAlignment="Center" 
+                           Margin="0,58,0,0" 
+                           VerticalAlignment="Top"/>
+
+                    <TextBox x:Name="SplittingTextBox" 
+                             TextWrapping="Wrap" 
+                             TextAlignment="Center" 
+                             CharacterCasing="Upper"
+                             HorizontalAlignment="Center" 
+                             VerticalAlignment="Top" 
+                             Width="320" 
+                             Height="120" 
+                             FontWeight="Bold" 
+                             FontSize="17" 
+                             Foreground="Gray" 
+                             Margin="0,84,0,0" />
+
+                    <Button x:Name="SplitButton" 
+                            Content="Split!"
+                            Background="#FF6A5190"
+                            Foreground="#FF3A9CAF"
+                            HorizontalAlignment="Center" 
+                            Margin="0,300,0,0" 
+                            VerticalAlignment="Top"
+                            Width="150"
+                            Height="50" 
+                            Click="SplitButton_Click"
+                            />
+
+                    <Label Content="Text must be entered after space" 
+                           HorizontalAlignment="Center" 
+                           Margin="0,203,0,0"
+                           VerticalAlignment="Top" 
+                           FontWeight="Heavy" 
+                           FontStyle="Italic" 
+                           Foreground="Red"/>
+
+                    <ListBox x:Name="SplittingListBox" 
+                             Height="300"
+                             Width="500"
+                             Visibility="Hidden"/>
+
+                    <Button x:Name="ExitFromList" 
+                            Visibility="Hidden" 
+                            Content="Exit"
+                            Foreground="Black"
+                            Background="Red"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0, 30, 10, 0" Click="ExitFromList_Click"
+                            />
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Word reversing">
+                <Grid Background="#FF4D9258" HorizontalAlignment="Center" VerticalAlignment="Center" Height="450" Width="800">
+                    <Label Content="Enter the textline you want to reverse"
+                           HorizontalAlignment="Center" 
+                           Margin="0,58,0,0" 
+                           VerticalAlignment="Top"/>
+
+                    <TextBox x:Name="ReversingTextBox" 
+                             TextWrapping="Wrap" 
+                             TextAlignment="Center" 
+                             CharacterCasing="Upper"
+                             HorizontalAlignment="Center" 
+                             VerticalAlignment="Top" 
+                             Width="320" 
+                             Height="120" 
+                             FontWeight="Bold" 
+                             FontSize="17" 
+                             Foreground="Gray" 
+                             Margin="0,84,0,0" />
+
+                    <Button x:Name="ReverseButton" 
+                            Content="Reverse!"
+                            Background="#FF6A5190"
+                            Foreground="#FF3A9CAF"
+                            HorizontalAlignment="Center" 
+                            Margin="0,300,0,0" 
+                            VerticalAlignment="Top"
+                            Width="150"
+                            Height="50" 
+                            Click="ReverseButton_Click"
+                            />
+
+                    <Label Content="Text must be entered after space" 
+                           HorizontalAlignment="Center" 
+                           Margin="0,203,0,0"
+                           VerticalAlignment="Top" 
+                           FontWeight="Heavy" 
+                           FontStyle="Italic" 
+                           Foreground="Red"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
